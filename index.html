@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Store</title>
+  <link rel="icon" type="image/png" href="/public/assets/logo-icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      const isDark = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.style.backgroundColor = '#030712';
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.style.backgroundColor = '#F9F8FE';
+        localStorage.theme = 'light';
+      }
+    })();
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      /* gray-950 - Matches Preloader */
+      margin: 0;
+    }
+
+    #root:empty {
+      background-color: #030712;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    * {
+      transition-property: background-color, border-color, color, fill, stroke;
+      transition-duration: 200ms;
+    }
+  </style>
+  <link rel="stylesheet" href="/src/index.css">
+</head>
+
+<body class="bg-[#F9F8FE] dark:bg-gray-950 text-[#474747] dark:text-gray-300 antialiased">
+  <div id="root"></div>
+  <script type="module" src="/index.jsx"></script>
+</body>
+
+</html>
