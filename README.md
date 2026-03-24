@@ -75,7 +75,9 @@ E-commerce completo de tenis e streetwear com frontend React, backend Node.js/Ex
 
 ## Pre-requisitos
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado e rodando
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado
+
+> **⚠️ Importante:** Antes de rodar qualquer comando `docker compose`, certifique-se de que o **Docker Desktop esta aberto e rodando**. Sem ele ativo, os comandos vao falhar.
 
 ---
 
